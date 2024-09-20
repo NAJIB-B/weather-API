@@ -21,7 +21,10 @@ module.exports = async (req, res, next) => {
 
     const data = response.data;
 
-    await redisClient.set(key, JSON.stringify(data));
+    await redisClient.set(key, JSON.stringify(data), {
+      EX: 60000
+    });
+  
 
     res.status(200).json({
       message: "success",
