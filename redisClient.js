@@ -2,9 +2,10 @@ const AppError = require("./utils/appError")
 
 const redis = require("redis");
 
+require("dotenv").config()
 
 const redisClient = redis.createClient({
-  url: "redis://default:eTYblfuFYpj4NgyKFjBS24pUhTiCzt6R@redis-12289.c16.us-east-1-2.ec2.redns.redis-cloud.com:12289",
+  url: process.env.REDIS_CONNECTION_URL,
 });
 
 redisClient.on("error", (error) => {

@@ -1,7 +1,7 @@
 const axios = require("axios");
 
 const redisClient = require("../redisClient");
-const AppError = require("../utils/appError")
+const AppError = require("../utils/appError");
 
 module.exports = async (req, res, next) => {
   try {
@@ -12,7 +12,7 @@ module.exports = async (req, res, next) => {
 
     const apiUrl = process.env.API_URL.replace(
       "<password>",
-      process.env.REDIS_CACHE_PASSWORD,
+      process.env.API_PASSWORD,
     ).replace("<query>", query);
 
     const response = await axios.get(apiUrl);
@@ -27,7 +27,7 @@ module.exports = async (req, res, next) => {
       message: "success",
       data,
     });
-  } catch (error) {
-   next(new AppError(error, error.status)) 
+} catch (error) {
+    next(new AppError(error, error.status));
   }
 };
