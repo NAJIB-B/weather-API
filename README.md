@@ -2,7 +2,9 @@
 
 ## Overview
 ![project architecture](https://assets.roadmap.sh/guest/weather-api-f8i1q.png)
-This is a Node.js and Express application that provides weather data for a specified city or country. It features Redis for caching API responses to improve performance and reduce unnecessary API calls. Additionally, rate limiting is implemented to protect the API from abuse.
+A Node.js and Express application that provides weather data for specified cities or countries, utilizing external weather APIs for real-time data retrieval. This project enhances performance through caching with Redis, allowing quick in-memory storage of API responses to reduce redundant calls. Additionally, it implements rate limiting to protect the API from abuse and ensure efficient use of resources.
+
+
 
 ## Features
 
