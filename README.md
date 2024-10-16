@@ -13,13 +13,7 @@ A Node.js and Express application that provides weather data for specified citie
 - **Axios**: HTTP client used for making API requests to the weather service.
 - **Rate Limiting**: Limits the number of requests per IP within a certain timeframe to prevent abuse.
 
-## Prerequisites
 
-Before running this project, ensure you have the following installed on your local machine:
-
-- **Node.js**: v14.x or higher
-- **Redis**: v6.x or higher
-- **npm**: Node package manager
 
 ## Installation
 
