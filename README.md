@@ -1,7 +1,7 @@
 # Weather API
 
 ## Overview
-
+![project architecture](https://assets.roadmap.sh/guest/weather-api-f8i1q.png)
 This is a Node.js and Express application that provides weather data for a specified city or country. It features Redis for caching API responses to improve performance and reduce unnecessary API calls. Additionally, rate limiting is implemented to protect the API from abuse.
 
 ## Features
@@ -65,18 +65,7 @@ npm start
   - Example: `GET /api/v1/weather?city=Cairo&date1=2001-10-27&date2=2007-10-27`
 
 
-### Response
 
-The response includes the weather data in JSON format. Example:
-
-```json
-{
-  "message": "success",
-  "data": {
-    // Weather data
-  }
-}
-```
 
 ## Project Source
 
